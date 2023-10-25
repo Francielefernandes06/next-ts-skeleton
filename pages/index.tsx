@@ -1,5 +1,8 @@
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
+
 
 const Home = () => {
   return (
@@ -11,7 +14,9 @@ const Home = () => {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <h2>Home page</h2>
-      <Link href="/about">About Page</Link>
+      <Link href="/about">
+        <FontAwesomeIcon icon={faCheck} className="fas fa-check"></FontAwesomeIcon> About Page
+      </Link>
     </>
   );
 }
