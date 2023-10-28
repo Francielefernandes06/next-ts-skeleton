@@ -1,7 +1,12 @@
+
+import Footer from "@/layouts/Footer/index";
 import Head from "next/head";
 import Link from "next/link";
+import Navbar  from '@/components/Navbar/index';
+import 'bootstrap/dist/css/bootstrap.css';
+import Home from './home/index';
 
-const Home = () => {
+const App = () => {
   return (
     <>
       <Head>
@@ -10,10 +15,15 @@ const Home = () => {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h2>Home page</h2>
-      <Link href="/about">About Page</Link>
+
+      <Home/>
+      
+      
+     
+      
+     
     </>
   );
 }
 
-export default Home;
+export default App;

@@ -1,8 +1,17 @@
+import Navbar  from '@/components/Navbar/index';
+import Footer  from '@/layouts/Footer/index';
+
+
 const DefaultLayout = ({ children }) => {
+
   return (
     <div>
-      <h1>Default Layout</h1>
+      <Navbar/>
+      
+      
       {children}
+
+      <Footer/>
     </div>
   );
 };
