@@ -43,64 +43,42 @@ function CardComponent({ data }) {
   return (
 
     
-      <Card style={{ boxShadow: '5px 5px 5px 0px rgba(0, 0, 0, 0.35)' }}>
-
-        <Card.Img variant="top" src={HORSE} />
-        <Card.ImgOverlay>
-        </Card.ImgOverlay>
-        <Card.Body style={{backgroundColor: '#D8D8D8'}}  className="d-flex justify-content-center  align-items-center">
-          <Card.Text>
-            <h4 className="fw-bolder text-center mt-2 mb-2">{data.title}</h4>
-            <p  className="text-center"><Image  src={STREAMING} 
-          alt="Menu Icon"
-          className="menu-icon"  /> <strong>Transmissão:</strong> {data.streamingDate}</p>
-
-<Card className="mb-3">
-      <Card.Body >
-      <Row>
-      <Col xs={4} className="d-flex justify-content-center align-items-center" >
-      <Card.Text style={{ fontSize:'13px' }}>
-     
-      <strong>Pré-lances:</strong>
-      </Card.Text>
-      </Col>
-      <Col xs={8} >
-      <Row>
-      <Card.Text style={{ borderLeft: '5px solid #63a103', fontSize:'13px' }}>
-      <strong>Início:</strong> {data.preBidsStart}
-      </Card.Text>
-      </Row>
-      <br/>
-       <Row>
-       <Card.Text  style={{ borderLeft: '5px solid #910012' , fontSize:'13px' }}>
-       <strong>Término: </strong> {data.preBidsEnd}
-      </Card.Text>
-      </Row>
-      </Col>
-      </Row>
-     
-        
-        
-       
-      </Card.Body>
-    </Card>
-    <Row className="d-flex justify-content-around">
-            <Stack style={{ display: 'flex', justifyContent: 'space-around' }} direction="horizontal" gap={2}>
-              {data.breeds.map((breed, index) => (
-                <Badge bg="light" text="dark" key={index}>
-                  {breed}
-                </Badge>
-              ))}
-            </Stack>
-          </Row>
-     
-          </Card.Text>
-          
-        </Card.Body>
-      </Card>
-   
-     
-    
+    <div className="card" style={{ boxShadow: '5px 5px 5px 0px rgba(0, 0, 0, 0.35)' }}>
+      <img src={HORSE} className="card-img-top" alt="Horse" />
+      <div className="card-body" style={{ backgroundColor: '#D8D8D8' }}>
+        <h4 className="card-title fw-bolder text-center mt-2 mb-2">{data.title}</h4>
+        <p className="card-text text-center">
+          <img src={STREAMING} alt="Menu Icon" className="menu-icon" /> <strong>Transmissão:</strong> {data.streamingDate}
+        </p>
+        <div className="mb-3 p-2">
+          <div className="row" style={{backgroundColor: '#FDFDFD' }}>
+            <div className="col-4 d-flex justify-content-center align-items-center">
+              <h4 style={{ fontSize: '13px' }}><strong>Pré-lances:</strong></h4>
+            </div>
+            <div className="col-8">
+              <div className="row mt-3">
+                <p style={{ borderLeft: '5px solid #63a103', fontSize: '13px' }}>
+                  <strong>Início:</strong> {data.preBidsStart}
+                </p>
+              </div>
+              <br />
+              <div className="row">
+                <p style={{ borderLeft: '5px solid #910012', fontSize: '13px' }}>
+                  <strong>Término:</strong> {data.preBidsEnd}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="d-flex justify-content-around">
+          {data.breeds.map((breed, index) => (
+            <span className="badge bg-light text-dark" key={index}>
+              {breed}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
 
   );
   }
