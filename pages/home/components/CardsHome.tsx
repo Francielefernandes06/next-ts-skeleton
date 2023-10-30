@@ -86,7 +86,11 @@ function CardComponent({ data }) {
 function CardsHome() {
   return (
     <div className="container mt-5">
-      <h2 className="fw-bolder mt-4 mb-4">Próximos leilões</h2>
+      <div className="d-flex justify-content-between align-items-center mt-4 mb-4">
+        <h2 className="fw-bolder">Próximos leilões</h2>
+        <p className="d-flex justify-content-between align-items-center mb-0">VER TODOS <i className="bi bi-chevron-right"></i></p>
+      </div>
+      
       <CarouselWithAutoSlide cardData={cardData} CardComponent={CardComponent} />
       
       </div>

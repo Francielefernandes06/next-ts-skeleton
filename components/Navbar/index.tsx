@@ -71,9 +71,9 @@ function Navbar() {
           
           </li>
           </ul></span>
-          <span className="navbar-brand"  >
+          <span className="navbar-brand lh-1 text-center" >
              <Link className="text-decoration-none text-break fs-6 lh-1" href="/login" style={{color: '#37406D'}}>
-        Entrar<br/> ou cadastrar
+        Entrar ou<br/>  cadastrar
         </Link>
           </span>
          

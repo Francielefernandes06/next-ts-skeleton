@@ -6,6 +6,10 @@ import React from 'react';
 
 import styles from '../styles.module.scss';
 
+
+
+const subtitle = `${styles.subtitle} mb-2 text-muted`;
+
 const auctionsData = [
   {
     title: 'Appaloosa',
@@ -30,17 +34,17 @@ const customCard = `${styles.customCard} card rounded-0`;
 
 function Auctions() {
   return (
-    <Container>
+    <div className="container">
       <h2 className="fw-bolder mt-4 mb-4">Leilões por raça</h2>
       <div className="row">
         {auctionsData.map((auction, index) => (
           <div key={index} className="mt-3 col-6">
-            <div className={customCard} style={{ width: '100%', minHeight: '6.2rem',backgroundColor:'#d7d7d7' }}>
+            <div className={customCard} style={{ width: '100%', minHeight: '6.5rem',backgroundColor:'#d7d7d7' }}>
               <div className="card-body">
                 <div className="row">
                   <div className="col-md-12">
-                    <Card.Title className="fs-6">{auction.title}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{auction.subtitle}</Card.Subtitle>
+                    <h5 className="fs-6">{auction.title}</h5>
+                    <p className={subtitle}>{auction.subtitle}</p>
                   </div>
                 </div>
               </div>
@@ -48,7 +52,7 @@ function Auctions() {
           </div>
         ))}
       </div>
-    </Container>
+    </div>
   );
 }
 
