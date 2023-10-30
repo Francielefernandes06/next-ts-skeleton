@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Carousel, Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
@@ -41,7 +41,7 @@ const cardData = [
 
 function CardComponent({ data }) {
   return (
-    <Container>
+
     
       <Card style={{ boxShadow: '5px 5px 5px 0px rgba(0, 0, 0, 0.35)' }}>
 
@@ -101,14 +101,14 @@ function CardComponent({ data }) {
    
      
     
-    </Container>
+
   );
   }
 
 function CardsHome() {
   return (
-    <div>
-      <h2 className="fw-bolder ms-3 mt-4 mb-4">Próximos leilões</h2>
+    <div className="container mt-5">
+      <h2 className="fw-bolder mt-4 mb-4">Próximos leilões</h2>
       <CarouselWithAutoSlide cardData={cardData} CardComponent={CardComponent} />
       
       </div>

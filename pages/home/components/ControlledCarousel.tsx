@@ -52,7 +52,7 @@ function CardComponent({data}) {
         </p>
         <p className="text-white">{data.streamingDate}</p>
         
-        <Row>
+        <div className="row">
           <p className="text-white" style={{ fontSize: '13px', textAlign: 'left' }}>
             <strong>Pré-lances</strong>
           </p>
@@ -62,9 +62,9 @@ function CardComponent({data}) {
           <p className="text-white" style={{ borderLeft: '5px solid #910012', fontSize: '13px' }}>
             <strong>Término:</strong> {data.preBidsEnd}
           </p>
-        </Row>
+        </div >
        
-        <Row className="d-flex justify-content-around mb-3">
+        <div className="row d-flex justify-content-around mb-3">
           <Stack style={{ display: 'flex', justifyContent: 'space-around' }} direction="horizontal" gap={2}>
             {data.breeds.map((breed, index) => (
               <Badge bg="light" text="dark" key={index}>
@@ -72,7 +72,7 @@ function CardComponent({data}) {
               </Badge>
             ))}
           </Stack>
-        </Row>
+        </div>
       </div>
     </div>
   );

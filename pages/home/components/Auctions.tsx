@@ -26,26 +26,28 @@ const auctionsData = [
 
 ];
 
+const customCard = `${styles.customCard} card rounded-0`;
+
 function Auctions() {
   return (
     <Container>
       <h2 className="fw-bolder mt-4 mb-4">Leilões por raça</h2>
-      <Row>
+      <div className="row">
         {auctionsData.map((auction, index) => (
-          <Col key={index} xs={6} className="mt-3">
-            <Card className={styles.customCard} style={{ width: '100%', minHeight: '6.2rem' }}>
-              <Card.Body>
-                <Row>
-                  <Col xs={12}>
+          <div key={index} className="mt-3 col-6">
+            <div className={customCard} style={{ width: '100%', minHeight: '6.2rem',backgroundColor:'#d7d7d7' }}>
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-md-12">
                     <Card.Title className="fs-6">{auction.title}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{auction.subtitle}</Card.Subtitle>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
-          </Col>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
-      </Row>
+      </div>
     </Container>
   );
 }

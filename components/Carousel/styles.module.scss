@@ -1,4 +1,6 @@
-
+.custom-carousel-control-prev, .custom-carousel-control-next {
+  position: inherit !important;
+}
 .carouselContainer {
   width: 100%;
   
@@ -38,10 +40,9 @@
     cursor: pointer;
   }
 
-  .indicators {
+  .buttonIndicator {
     display: flex;
     justify-content: center;
-    
     margin-top: 10px;
   }
   

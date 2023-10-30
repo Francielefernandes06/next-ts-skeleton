@@ -13,90 +13,48 @@ const PIN = 'assets/icon/pin.svg'
 
 function CardContato() {
   return (
-    <Container className="mt-5 mb-4">
+
+    <div className="container mb-5">
       <h2 className="fw-bolder mt-5 mb-4">Nossos Contatos</h2>
-      <Card style={{ boxShadow: '5px 5px 5px 0px rgba(0, 0, 0, 0.35)' }}>
-
-        <Card.ImgOverlay>
-        </Card.ImgOverlay>
-        <Card.Body style={{backgroundColor: '#D8D8D8'}}  className="d-flex align-items-center">
-          <Card.Text>
-
-          <Row >
-        <Col xs={1}>
-        <Image src={PHONE} 
+      <div className="card" >
+         <ul className="list-group list-group-flush">
+             <li className="list-group-item p-3">
+              <p> <Image src={PHONE} 
           alt="Menu Icon"
-          className="menu-icon" /> 
-        </Col>
-        <Col xs={11}><p  className="text-left" > (11) 4858-5115 (Escritório)</p></Col>
-       
-      </Row>
-      <Row >
-        <Col xs={1}>
-        <Image src={PHONE} 
+          className="menu-icon me-2" />  (11) 4858-5115 (Escritório)</p>
+              <p>  <Image src={PHONE} 
           alt="Menu Icon"
-          className="menu-icon" /> 
-        </Col>
-        <Col xs={11}><p  className="text-left" > (15) 98177-4112 ( Carlos Santana)</p></Col>
-       
-      </Row>
-      <Row >
-        <Col xs={1}>
-        <Image src={PHONE} 
+          className="menu-icon me-2" /> (15) 98177-4112 ( Carlos Santana)</p>
+              <p>  <Image src={PHONE} 
           alt="Menu Icon"
-          className="menu-icon" /> 
-        </Col>
-        <Col xs={11}><p  className="text-left" > (11) 99669-9022 ( Freitas Neto)</p></Col>
-       
-      </Row>
-          <hr/>
-          <Row >
-        <Col xs={1}>
-        <Image src={MAIL} 
+          className="menu-icon me-2" /> (11) 99669-9022 ( Freitas Neto)</p>
+             </li>
+      <li className="list-group-item p-3">   <p>
+      <Image src={MAIL} 
           alt="Menu Icon"
-          className="menu-icon" /> 
-        </Col>
-        <Col xs={11}><p  className="text-left" > contato@opportunityleiloes.com.br</p></Col>
-       
-      </Row>
-          
-           <hr/>
-
-          <Row >
-        <Col xs={1}>
-        <Image src={PIN} 
-          alt="Menu Icon"
-          className="menu-icon" />
-        </Col>
-        <Col xs={11}><p  className="text-left" >  Rua Fradique Coutinho 50 - 3º Andar - Conjunto 32 - Pinheiros - São Paulo/SP
-          CEP 05416-010</p></Col>
-       
-      </Row>
-{/* <p  className="text-left" ><Image src={PIN} 
-          alt="Menu Icon"
-          className="menu-icon" />  Rua Fradique Coutinho 50 - 3º Andar - Conjunto 32 - Pinheiros - São Paulo/SP
-          CEP 05416-010</p> */}
-
-          <hr/>
-
-          <Row >
-        <Col>
-     Instagram
-        </Col>
-        <Col>Youtube</Col>
-        <Col>Facebook</Col>
-      </Row>
-
-
-          </Card.Text>
-          
-          
-        </Card.Body>
-      </Card>
-   
+          className="menu-icon me-2" />
+        contato@opportunityleiloes.com.br</p></li>
+    <li className="list-group-item">
+      <ul className="list-group d-flex flex-row justify-content-around mt-2">
+            <li className="list-group-item border border-0 bg-transparent
+ d-flex align-items-center">
+              <i className="bi bi-instagram  me-2"> </i>Intagram
+            </li>
+            <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
+              <i className="bi bi-youtube me-2"> </i>Youtube
+            </li>
+            <li className="list-group-item border border-0 bg-transparent d-flex align-items-center">
+              <i className="bi bi-facebook me-2"> </i>Facebook
+            </li>
+          </ul>
+    </li>
+  </ul>
+</div>
+      
+    
      
     
-    </Container>
+    </div>
   );
 }
 

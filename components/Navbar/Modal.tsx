@@ -12,30 +12,53 @@ function ModalLang(props) {
 
 
   return (
-    <Modal
-    {...props}
-    size="lg"
-    aria-labelledby="contained-modal-title-vcenter"
-    centered
-  >
-    <Modal.Header closeButton style={{backgroundColor:'#37406d', color: '#fff'}}>
-      <Modal.Title id="contained-modal-title-vcenter text-white" >
-       Idioma/Language
-      </Modal.Title>
-    </Modal.Header>
-    <Modal.Body>
-    <ListGroup variant="flush">
-      <ListGroup.Item> <Image src={BRA} width={50} className="me-3"
-          height={50} fluid />Português</ListGroup.Item>
-      <ListGroup.Item> <Image src={EUA} width={50} className="me-3"
-          height={50} />English</ListGroup.Item>
-      <ListGroup.Item> <Image src={SPA} width={50} className="me-3"
-          height={50} /> Espanõl</ListGroup.Item>
+  //   <Modal
+  //   {...props}
+  //   size="lg"
+  //   aria-labelledby="contained-modal-title-vcenter"
+  //   centered
+  //   className="rounded-0"
+  // >
+  //   <Modal.Header closeButton style={{backgroundColor:'#37406d', color: '#fff'}}>
+  //     <Modal.Title id="contained-modal-title-vcenter text-white" >
+  //      Idioma/Language
+  //     </Modal.Title>
+  //   </Modal.Header>
+  //   <Modal.Body>
+  //   <ListGroup variant="flush">
+  //     <ListGroup.Item> <Image src={BRA} width={50} className="me-3"
+  //         height={50} fluid />Português</ListGroup.Item>
+  //     <ListGroup.Item> <Image src={EUA} width={50} className="me-3"
+  //         height={50} />English</ListGroup.Item>
+  //     <ListGroup.Item> <Image src={SPA} width={50} className="me-3"
+  //         height={50} /> Espanõl</ListGroup.Item>
     
-    </ListGroup>
-    </Modal.Body>
+  //   </ListGroup>
+  //   </Modal.Body>
    
-  </Modal>
+  // </Modal>
+  <div className="modal fade rounded-0" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog modal-dialog-centered rounded-0">
+    <div className="modal-content rounded-0">
+      <div className="modal-header" style={{backgroundColor:'#37406d', color: '#fff'}}>
+        <h5 className="modal-title">Idioma/Language</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" style={{color: '#fff'}}aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+      <ul className="list-group">
+  <li className="list-group-item border-end-0 border-start-0 border-top-0 "><Image src={BRA} width={32} className="me-3"
+           height={32} fluid />Português</li>
+  <li className="list-group-item border-end-0 border-start-0 border-2"><Image src={EUA} width={32} className="me-3"
+           height={32} />English</li>
+  <li className="list-group-item border-end-0 border-start-0 border-bottom-0 "><Image src={SPA} width={32} className="me-3"
+         height={32} /> Espanõl</li>
+  
+</ul>
+      </div>
+     
+    </div>
+  </div>
+</div> 
   );
 }
 

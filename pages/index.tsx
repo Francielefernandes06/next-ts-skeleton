@@ -1,10 +1,9 @@
-
-import Footer from "@/layouts/Footer/index";
 import Head from "next/head";
-import Link from "next/link";
-import Navbar  from '@/components/Navbar/index';
 import 'bootstrap/dist/css/bootstrap.css';
+//import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Home from './home/index';
+
 
 const App = () => {
   return (
