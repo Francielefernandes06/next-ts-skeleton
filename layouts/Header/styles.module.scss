@@ -7,7 +7,9 @@
   margin-top: 40px;
   .link{
     background-color: #37406d;
-    color: #fff;
+    color: #fff !important;
+    display: flex;
+    justify-content: space-between;
    
    
   }

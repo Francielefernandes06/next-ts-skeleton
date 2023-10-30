@@ -13,7 +13,7 @@ function CarouselWithAutoSlide({ cardData, CardComponent }) {
     
     <div className="carousel-inner">
       {cardData.map((data, index) => (
-        <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
+        <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index} data-bs-interval="10000">
           <CardComponent data={data} />
         </div>
       ))}
@@ -52,8 +52,8 @@ function CarouselWithAutoSlide({ cardData, CardComponent }) {
         ></button>
       ))}
     </div>
-      <button className="carousel-control-next" style={{ position: 'inherit', }} type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="false">
+      <button className="carousel-control-next" style={{ position: 'inherit', opacity: 1,}}type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span className="carousel-control-next-icon" style={{ color: 'black' }} aria-hidden="false">
           <Image src={NEXT} alt="Next Icon" className="next-icon" />
         </span>
         <span className="visually-hidden">Next</span>

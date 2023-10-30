@@ -1,5 +1,3 @@
-// components/Navbar.js
-
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -32,31 +30,10 @@ function Navbar() {
   };
 
   return (
-//     <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light p-2">
-//       <div className="container">
-//       <img
-//           src={LOGO_HEADER} 
-//           alt="Menu Icon"
-//           className="menu-icon" 
-//           onClick={handleShow}
-//         />     
-
-
-//         <Image
-//           src={LOGO_OPPORTUNITY}
-//           alt="Opportunity Logo"
-//           width={100}
-//           height={50}
-//         />
-
-
-        
-       
-        
+<div>
+  <ModalLang/>
+    <nav className="navbar fixed-top shadow bg-body-tertiary rounded-0">
      
-//       </div>
-//     </nav>
-    <nav className="navbar bg-body-tertiary fixed-top">
     <div className="container">
       <span className="navbar-brand"  >
         <Image
@@ -85,10 +62,10 @@ function Navbar() {
           src={LOGO_BRAZIL}
           alt="Opportunity Logo"
           role="button"
-          aria-expanded="false"
+          
           width={24}
           height={24}
-          onClick={() => setIsModalOpen(true)}
+          
         />
             </a>
           
@@ -99,7 +76,7 @@ function Navbar() {
         Entrar<br/> ou cadastrar
         </Link>
           </span>
-          <ModalLang show={isModalOpen} onHide={() => setIsModalOpen(false)} />
+         
         <Header show={show} handleClose={handleClose} />
      
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -107,6 +84,7 @@ function Navbar() {
       </div>
     </div>
   </nav>
+  </div>
   );
 }
 
